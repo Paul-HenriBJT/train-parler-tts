@@ -1,11 +1,5 @@
 # Deploying with Flex AI
 
-## Prerequisites
-
-- Hugging Face account and token
-- Flex AI CLI installed
-- Access to FCS (Flex Compute Service)
-
 ## Steps
 
 ### 1. Add Source
@@ -59,3 +53,4 @@ flexai training fetch <name_of_the_training>
 
 - Ensure all placeholders (e.g., `<name_of_the_training>`, `<model_source_name>`, `<your_dataset_name>`) are replaced with your actual values.
 - The key difference in the correct method is the use of `accelerate.commands.launch`, which properly initializes the training process.
+- This does not requires a Hugging Face account.
