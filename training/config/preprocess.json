@@ -47,5 +47,5 @@
   "group_by_length": true,
   "preprocessing_only": true,
   "preprocessed_dataset_hub_path": "PHBJT/mls_french_tokenized",
-  "hub_token": "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"
+  "token": "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"
 }
