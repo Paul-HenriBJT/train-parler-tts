@@ -6,12 +6,6 @@
 - Flex AI CLI installed
 - Access to FCS (Flex Compute Service)
 
-## Configuration
-
-1. In the [config file](./training/config/preprocess.json), specify:
-   - Your Hugging Face token (`token`)
-   - The path to save the dataset (`preprocessed_dataset_hub_path`)
-
 ## Steps
 
 ### 1. Add Source
@@ -19,14 +13,14 @@
 Add your model source to Flex AI:
 
 ```bash
-flexai source add <model_source_name> <github_url>
+flexai source add <model_source_name> https://github.com/Paul-HenriBJT/train-parler-tts.git
 ```
 
 Replace `<model_source_name>` with your actual source name.
 
 ### 2. Choose Dataset
 
-The dataset is loaded directly from the Hugging Face Hub during the training phase. Choose a small dataset from FCS to reduce build time. The Hugging Face dataset name must be specified in the [config JSON file](./training/config/preprocess.json).
+The dataset is loaded directly from the Hugging Face Hub during the training phase. Choose a small dataset from FCS to reduce build time. The Hugging Face dataset name is specified in the [config JSON file](./training/config/preprocess.json).
 
 ### 3. Launch Training
 
@@ -35,7 +29,7 @@ The dataset is loaded directly from the Hugging Face Hub during the training pha
 ```bash
 flexai training run <name_of_the_training> \
     --source-name <model_source_name> \
-    --source-revision <revision> \
+    --source-revision master \
     --dataset <your_dataset_name> \
     -- ./training/run_parler_tts_training.py ./training/config/preprocess.json
 ```
