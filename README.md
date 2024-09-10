@@ -48,6 +48,13 @@ flexai training run <name_of_the_training> \
 
 This method should succeed.
 
+#### Fetch the output
+
+You can fetch the output with 
+```bash
+flexai training fetch <name_of_the_training>
+```
+
 ## Notes
 
 - Ensure all placeholders (e.g., `<name_of_the_training>`, `<model_source_name>`, `<your_dataset_name>`) are replaced with your actual values.
