@@ -570,7 +570,7 @@ def main():
 
     if data_args.preprocessed_dataset_hub_path and accelerator.is_main_process and not data_args.training_only:
         logger.info(f"Pushing processed dataset to Hub: {data_args.preprocessed_dataset_hub_path}")
-        vectorized_datasets.push_to_hub(data_args.preprocessed_dataset_hub_path)
+        vectorized_datasets.push_to_hub(data_args.preprocessed_dataset_hub_path, token=data_args.token)
 
     audio_max_length = None
     if padding == "max_length":
@@ -757,7 +757,7 @@ def main():
 
     if accelerator.is_main_process:
         if training_args.push_to_hub:
-            api = HfApi(token=data_args.hub_token)
+            api = HfApi(token=data_args.token)
 
             # Create repo (repo_name from args or inferred)
             repo_name = training_args.hub_model_id

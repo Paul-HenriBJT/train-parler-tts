@@ -113,14 +113,6 @@ class DataTrainingArguments:
             " librispeech and common voice, set `train_dataset_name='librispeech_asr+common_voice'`."
         },
     )
-    hub_token: Optional[str] = field(
-        default=None,
-        metadata={
-            "help": ("Your Hugging Face API token. This is needed to upload the datasets to the Hub."
-                     "This is also needed if your source datasets are private."
-                     "Make sure that you have set the right permissions on the token.")
-        },
-    )
     train_dataset_config_name: Optional[str] = field(
         default=None,
         metadata={
