@@ -47,5 +47,6 @@
   "group_by_length": true,
   "preprocessing_only": true,
   "preprocessed_dataset_hub_path": "PHBJT/mls_french_tokenized",
-  "id_column_name": "id"
+  "id_column_name": "id",
+  "huggingface_hub_api_key": "YOUR_API_KEY"
 }

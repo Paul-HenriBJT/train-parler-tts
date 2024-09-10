@@ -757,7 +757,7 @@ def main():
 
     if accelerator.is_main_process:
         if training_args.push_to_hub:
-            api = HfApi(token=training_args.hub_token)
+            api = HfApi(token=data_args.hub_token)
 
             # Create repo (repo_name from args or inferred)
             repo_name = training_args.hub_model_id
