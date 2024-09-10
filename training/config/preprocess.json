@@ -47,6 +47,5 @@
   "group_by_length": true,
   "preprocessing_only": true,
   "preprocessed_dataset_hub_path": "PHBJT/mls_french_tokenized",
-  "id_column_name": "id",
   "hub_token": "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"
 }
